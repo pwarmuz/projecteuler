@@ -3,7 +3,7 @@
    @Author:             Phil
    @Date:               2017-05-06 02:21:19
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-06 15:11:00
+   +Last Modified time: 2017-05-06 15:29:19
 */
 package main
 
@@ -12,6 +12,9 @@ func problem1() (int, int) {
 	    Find the sum of all the multiples of 3 or 5 below 1000.
 	*/
 	var m3, m5, m15, theory, programmatic int
+	/*  Implementing math theory
+	    sum = n(n+1)/2
+	*/
 	limit := 1000
 	multipleSum := func(limit int, i int) int {
 		below := limit - 1
@@ -23,6 +26,8 @@ func problem1() (int, int) {
 	m15 = multipleSum(limit, 15)
 	theory = m3 + m5 - m15
 
+	/*  Implementing a loop with modulo operator
+	 */
 	for i := 0; i < limit; i++ {
 		if i%3 == 0 {
 			programmatic += i

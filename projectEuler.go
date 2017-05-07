@@ -3,7 +3,7 @@
    @Author:             Phil
    @Date:               2017-05-06 02:20:29
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-06 21:19:59
+   +Last Modified time: 2017-05-07 01:02:03
 */
 package main
 
@@ -14,4 +14,5 @@ func main() {
 	fmt.Println("Math theory:", t, "Programmatic:", p)
 
 	fmt.Println("Total:", problem2())
+	problem3()
 }

@@ -1,11 +1,10 @@
 /*
-   @Project: 			projecteuler
-   @Author: 			Phil
-   @Date:   			2017-05-06 15:58:27
+   @Project:            projecteuler
+   @Author:             Phil
+   @Date:               2017-05-06 15:57:49
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-06 21:13:49
+   +Last Modified time: 2017-05-06 21:17:52
 */
-
 package main
 
 var sum uint

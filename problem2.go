@@ -3,7 +3,7 @@
    @Author: 			Phil
    @Date:   			2017-05-06 15:58:27
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-06 21:11:35
+   +Last Modified time: 2017-05-06 21:13:49
 */
 
 package main
@@ -32,10 +32,10 @@ func fibonacci() func(uint) uint {
 			return
 		}
 		if f%2 == 0 {
+			//4613732
 			sum += f
 		}
 		ret, f, s = f, s, f+s
 		return
 	}
-	//4613732
 }

@@ -3,13 +3,12 @@
    @Author:             Phil
    @Date:               2017-05-06 15:57:49
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-08 01:49:13
+   +Last Modified time: 2017-05-08 02:01:18
 */
 package projecteuler
 
 func Problem0002() uint {
 	var sum uint
-	sum = 0
 	fib := Fibonacci(&sum)
 	//  1000 is a wild guess I'd like to get this accurate
 	for i := 0; i < 1000; i++ {

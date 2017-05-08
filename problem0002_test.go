@@ -3,7 +3,7 @@
    @Author:             Phil
    @Date:               2017-05-07 21:17:14
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-08 01:32:22
+   +Last Modified time: 2017-05-08 01:50:50
 */
 
 package projecteuler_test
@@ -26,7 +26,7 @@ func TestProblem0002(t *testing.T) {
 
 	var got, sum uint
 	sum = 0
-	fib := projecteuler.Fibonacci()
+	fib := projecteuler.Fibonacci(&sum)
 	for _, values := range testCases {
 		for i := 0; i < 1000; i++ {
 			fib(values.limits)

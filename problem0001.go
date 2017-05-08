@@ -3,11 +3,11 @@
    @Author:             Phil
    @Date:               2017-05-06 02:21:19
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-07 20:35:43
+   +Last Modified time: 2017-05-08 01:12:12
 */
-package main
+package projecteuler
 
-func problem0001(limit int) (int, int) {
+func Problem0001(limit int) (int, int) {
 	/*  If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 	    Find the sum of all the multiples of 3 or 5 below 1000.
 	*/

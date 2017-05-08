@@ -3,39 +3,39 @@
    @Author:             Phil
    @Date:               2017-05-07 21:17:14
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-07 21:30:43
+   +Last Modified time: 2017-05-08 01:32:22
 */
 
-package main
+package projecteuler_test
 
 import (
 	"testing"
+
+	"github.com/pwarmuzStvns/projecteuler"
 )
 
-type testvaluesuint struct {
-	limits  uint
-	answers uint
-}
-
-var tests0002 = []testvaluesuint{
-	{5, 2},
-	{10, 10},
-	{300000, 33},
-}
-
 func TestProblem0002(t *testing.T) {
-	var got uint
+	testCases := []struct {
+		limits  uint
+		answers uint
+	}{
+		{5, 2},
+		{10, 10},
+		{300000, 33},
+	}
+
+	var got, sum uint
 	sum = 0
-	fib := fibonacci()
-	for _, values := range tests0002 {
+	fib := projecteuler.Fibonacci()
+	for _, values := range testCases {
 		for i := 0; i < 1000; i++ {
 			fib(values.limits)
 		}
 		got = sum
 		if got != values.answers {
 			t.Error(
-				"For", values.limits,
-				"Expected", values.answers,
+				"For:", values.limits,
+				"Want:", values.answers,
 				"Got:", got)
 		}
 	}

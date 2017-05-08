@@ -3,16 +3,16 @@
    @Author:             Phil
    @Date:               2017-05-06 21:22:38
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-07 20:50:45
+   +Last Modified time: 2017-05-08 01:12:03
 */
 
-package main
+package projecteuler
 
 import (
 	"fmt"
 )
 
-func problem0003() {
+func Problem0003() {
 	/*  The prime factors of 13195 are 5, 7, 13 and 29.
 	    What is the largest prime factor of the number 600851475143 ?
 	*/

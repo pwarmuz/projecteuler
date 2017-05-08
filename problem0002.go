@@ -3,13 +3,14 @@
    @Author:             Phil
    @Date:               2017-05-06 15:57:49
    +Last Modified by:   Phil
-   +Last Modified time: 2017-05-06 21:17:52
+   +Last Modified time: 2017-05-07 21:31:01
 */
 package main
 
 var sum uint
 
-func problem2() uint {
+func problem0002() uint {
+	sum = 0
 	fib := fibonacci()
 	//  1000 is a wild guess I'd like to get this accurate
 	for i := 0; i < 1000; i++ {

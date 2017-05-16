@@ -1,11 +1,9 @@
 /*
    @Project:            projecteuler
-   @Author:             Phil
    @Date:               2017-05-06 15:57:49
-   +Last Modified by:   Phil
-   +Last Modified time: 2017-05-08 02:01:18
+   +Last Modified time: 2017-05-16 03:25:53
 */
-package projecteuler
+package main
 
 func Problem0002() uint {
 	var sum uint

@@ -1,12 +1,10 @@
 /*
    @Project:            projecteuler
-   @Author:             Phil
    @Date:               2017-05-06 21:22:38
-   +Last Modified by:   Phil
-   +Last Modified time: 2017-05-08 01:12:03
+   +Last Modified time: 2017-05-16 03:25:53
 */
 
-package projecteuler
+package main
 
 import (
 	"fmt"

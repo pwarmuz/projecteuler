@@ -2,25 +2,20 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
-// Problem0004 prints the largest palindrome
-func Problem0004() {
-	/*
-		https://projecteuler.net/problem=4
-		A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-		Find the largest palindrome made from the product of two 3-digit numbers.
-	*/
-	fmt.Println("Start Problem0004 palindrome")
-	var palindrome, temp int
-	largest := 0
-	product1 := 0
-	product2 := 0
+type Palindrome struct {
+	Largest, Product1, Product2 int
+}
 
-	for i := 1000; i >= 100; i-- {
-		for n := 1000; n >= 100; n-- {
+func (p *Palindrome) Digits(digits int) {
+	var palindrome, temp int
+	high := int(math.Pow10(digits))
+	low := int(math.Pow10(digits - 1))
+	for i := high; i >= low; i-- {
+		for n := high; n >= low; n-- {
 			palindrome = i * n
-			//fmt.Printf("[ Checking %d ]", palindrome)
 			// reorder palindrome
 			temp = palindrome
 			reverse := 0
@@ -33,20 +28,28 @@ func Problem0004() {
 					break
 				}
 			}
-			if largest > temp {
+			if p.Largest > temp {
 				break
 			}
 
-			// compare palindrome
+			// compare palindrome and store largest palidrome
 			if temp == reverse {
-				largest = temp
-				product1 = i
-				product2 = n
-				// store palindrome to compare if greater
-				//fmt.Printf("[ %d is a Palindrome of %d ]", temp, reverse)
+				p.Largest = temp
+				p.Product1 = i
+				p.Product2 = n
 			}
 		}
 	}
+}
 
-	fmt.Println("Largest palindrome", largest, " p1 ", product1, " p2 ", product2)
+// Problem0004 prints the largest palindrome
+func Problem0004() {
+	/*
+		https://projecteuler.net/problem=4
+		A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+		Find the largest palindrome made from the product of two 3-digit numbers.
+	*/
+	var p Palindrome
+	p.Digits(3)
+	fmt.Println("Largest palindrome", p.Largest, " p1 ", p.Product1, " p2 ", p.Product2)
 }

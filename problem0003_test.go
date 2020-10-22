@@ -19,8 +19,7 @@ func TestProblem0003(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		largest := primeFactor(test.factors)
-		got := largest()
+		got := LargestPrime(test.factors)
 		if test.want != got {
 			t.Errorf("failed largest prime number want %d, got%d", test.want, got)
 		}

@@ -9,7 +9,7 @@ func main() {
 	start := time.Now()
 	fmt.Println("started")
 
-	Problem0002()
+	Problem0005()
 
 	elapsed := time.Since(start)
 	fmt.Println("elapsed: ", elapsed)

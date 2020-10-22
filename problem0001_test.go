@@ -1,9 +1,3 @@
-/*
-   @Project:            projecteuler
-   @Date:               2017-05-07 20:26:21
-   +Last Modified time: 2017-05-16 03:26:19
-*/
-
 package main
 
 import (
@@ -12,21 +6,22 @@ import (
 
 func TestProblem0001(t *testing.T) {
 	testCases := []struct {
-		limits  int
-		answers int
+		limits int
+		sums   int
 	}{
 		{1000, 233168},
 		{10, 23},
 	}
-	var theory, programmatic int
+
+	var theory, looped int
 	for _, values := range testCases {
-		theory, programmatic = Problem0001(values.limits)
-		if theory != values.answers || programmatic != values.answers {
+		theory, looped = Problem0001(values.limits)
+		if theory != values.sums || looped != values.sums {
 			t.Error(
 				"For:", values.limits,
-				"Want:", values.answers,
+				"Want:", values.sums,
 				"Got theory:", theory,
-				"Got programmatic:", programmatic)
+				"Got programmatic:", looped)
 		}
 	}
 }

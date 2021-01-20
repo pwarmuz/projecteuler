@@ -5,6 +5,14 @@ import (
 	"math"
 )
 
+// Problem0007 find the 10001st prime number
+func Problem0007() {
+	targetPrime := int64(10001)
+
+	targetPrimeValue := sievePrimeFactor(targetPrime)
+	fmt.Println("the ", targetPrime, "st prime is ", targetPrimeValue)
+}
+
 // By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 // What is the 10 001st prime number?
 func isPrime(n int64) bool {
@@ -21,6 +29,7 @@ func isPrime(n int64) bool {
 	}
 	return true
 }
+
 func countPrimeFactor(targetPrime int64) int64 {
 	// elapsed:  324.080372ms
 	arrayOfPrimes := []int64{}
@@ -76,12 +85,4 @@ func sievePrimeFactor(targetPrime int64) int64 {
 	fmt.Println("array", primeValues[0:10])
 	targetPrimeValue = int64(primeValues[targetPrime-1])
 	return targetPrimeValue
-}
-
-// Problem0007 find the 10001st prime number
-func Problem0007() {
-	targetPrime := int64(10001)
-
-	targetPrimeValue := sievePrimeFactor(targetPrime)
-	fmt.Println("the ", targetPrime, "st prime is ", targetPrimeValue)
 }

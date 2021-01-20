@@ -5,6 +5,14 @@ import (
 	"math"
 )
 
+// Problem0005 finds the smallest number evenly divisible from 1 to 20
+func Problem0005() {
+	limit := int64(20)
+	result := EvenlyDivisible(limit)
+	fmt.Printf("Evenly divisible from 1 to %d is %d\n", limit, result)
+}
+
+// EvenlyDivisible finds the smallest evenly divisble number to a limit
 func EvenlyDivisible(limit int64) uint64 {
 	/*
 		https://projecteuler.net/problem=5
@@ -42,11 +50,4 @@ func EvenlyDivisible(limit int64) uint64 {
 	}
 
 	return smallest
-}
-
-// Problem0005 finds the smallest number evenly divisible from 1 to 20
-func Problem0005() {
-	limit := int64(20)
-	result := EvenlyDivisible(limit)
-	fmt.Printf("Evenly divisible from 1 to %d is %d\n", limit, result)
 }
